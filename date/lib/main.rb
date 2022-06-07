@@ -57,6 +57,7 @@ class Farm
 
   def total_plant_heights
     total = 0
+    plots.reduce(0) { |total, plot| total += plot.total_height}
     plots.each do |plot|
       # Remove the plot name before iterating over the plants.
       total += plot.total_height
