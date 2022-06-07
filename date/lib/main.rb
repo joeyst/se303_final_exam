@@ -17,6 +17,10 @@ class Plot
     @crops = crops
     @name = name
   end
+
+  def size
+    crops.length
+  end
 end
 
 class Farm
