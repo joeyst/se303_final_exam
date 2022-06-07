@@ -3,6 +3,14 @@
 #       refactoring.
 # Hint: Let the existing code use the new code.
 
+class Crop
+  attr_reader :name, :height
+  def initialize(name, height)
+    @name = name
+    @height = height
+  end
+end
+
 class Farm
 
   attr_reader :plots
