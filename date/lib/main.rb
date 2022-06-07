@@ -47,7 +47,7 @@ class Farm
   end
 
   def total_number_of_plants
-                  # Subtract one from size because name is not a plant
+    # Subtract one from size because name is not a plant
     plots.reduce(0) { |total, plot| total += (plot.size - 1) }
   end
 
