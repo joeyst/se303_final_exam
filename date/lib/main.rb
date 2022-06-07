@@ -11,6 +11,14 @@ class Crop
   end
 end
 
+class Plot
+  attr_reader :crops, :name
+  def initialize(crops, name)
+    @crops = crops
+    @name = name
+  end
+end
+
 class Farm
 
   attr_reader :plots
