@@ -12,3 +12,13 @@ def story
   conclusion = "And that was it."
   first + middle + conclusion
 end
+
+def add_new_lines
+  middle = ""
+  middle << "\n"
+  middle << "\n"
+  middle << "\n"
+  middle << "\n"
+  middle << "\n"
+  middle
+end
