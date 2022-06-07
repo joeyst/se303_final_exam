@@ -21,6 +21,10 @@ class Plot
   def size
     crops.length
   end
+
+  def total_height
+    crops.reduce(0) { |total, crop| total += crop.height }
+  end
 end
 
 class Farm
@@ -38,7 +42,9 @@ class Farm
     beet_2 = Crop.new("Deep Darkness", 1)
     # Plots have a name and some plants
     plot_a = ["Plot A", corn, radish_1, radish_2]
+    plot_a = Plot.new([corn, radish_1, radish_2], "Plot A")
     plot_b = ["Plot B", cucumber, tomato, beet_1, beet_2]
+    plot_b = Plot.new([cucumber, tomato, beet_1, beet_2], "Plot B")
     @plots = [plot_a, plot_b]
   end
 
@@ -48,16 +54,14 @@ class Farm
 
   def total_number_of_plants
     # Subtract one from size because name is not a plant
-    plots.reduce(0) { |total, plot| total += (plot.size - 1) }
+    plots.reduce(0) { |total, plot| total += plot.size }
   end
 
   def total_plant_heights
     total = 0
     plots.each do |plot|
       # Remove the plot name before iterating over the plants.
-      plot.drop(1).each do |plant|
-        total += plant.height
-      end
+      total += plot.total_height
     end
     total
   end
