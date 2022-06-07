@@ -41,9 +41,7 @@ class Farm
     beet_1 = Crop.new("Rainbow", 1)
     beet_2 = Crop.new("Deep Darkness", 1)
     # Plots have a name and some plants
-    plot_a = ["Plot A", corn, radish_1, radish_2]
     plot_a = Plot.new([corn, radish_1, radish_2], "Plot A")
-    plot_b = ["Plot B", cucumber, tomato, beet_1, beet_2]
     plot_b = Plot.new([cucumber, tomato, beet_1, beet_2], "Plot B")
     @plots = [plot_a, plot_b]
   end
