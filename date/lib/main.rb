@@ -18,7 +18,7 @@ class Plot
     @name = name
   end
 
-  def size
+  def total_number_of_plants
     crops.length
   end
 end
