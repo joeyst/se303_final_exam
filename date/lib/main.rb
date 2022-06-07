@@ -18,12 +18,12 @@ class Farm
   def initialize
     # Plants have a name and a height
     corn = Crop.new("Sugar Baby", 3)
-    radish_1 = ["Red Boomer", 1]
-    radish_2 = ["Plump Pucker", 1]
-    cucumber = ["Green Lady", 2]
-    tomato = ["Dark Plump", 2]
-    beet_1 = ["Rainbow", 1]
-    beet_2 = ["Deep Darkness", 1]
+    radish_1 = Crop.new("Red Boomer", 1)
+    radish_2 = Crop.new("Plump Pucker", 1)
+    cucumber = Crop.new("Green Lady", 2)
+    tomato = Crop.new("Dark Plump", 2)
+    beet_1 = Crop.new("Rainbow", 1)
+    beet_2 = Crop.new("Deep Darkness", 1)
     # Plots have a name and some plants
     plot_a = ["Plot A", corn, radish_1, radish_2]
     plot_b = ["Plot B", cucumber, tomato, beet_1, beet_2]
