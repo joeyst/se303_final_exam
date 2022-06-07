@@ -44,7 +44,11 @@ class Farm
     plots.each do |plot|
       # Remove the plot name before iterating over the plants.
       plot.drop(1).each do |plant|
-        total += plant[1]
+        if plant.class == Array
+          total += plant[1]
+        elsif plant.class == Crop
+          total += plant.height
+        end
       end
     end
     total
