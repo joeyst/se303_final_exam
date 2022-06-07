@@ -13,17 +13,20 @@ class Phrase
 end
 
 def word_count(beginning, middle, conclusion)
-  beginning.split.size +
-  middle.split.size +
-  conclusion.split.size
+  phrase = Phrase.new(beginning, middle, conclusion)
+  phrase.beginning.split.size +
+  phrase.middle.split.size +
+  phrase.conclusion.split.size
 end
 
 def letter_count(beginning, middle, conclusion)
-  beginning.size + middle.size + conclusion.size
+  phrase = Phrase.new(beginning, middle, conclusion)
+  phrase.beginning.size + phrase.middle.size + phrase.conclusion.size
 end
 
 def period_count(beginning, middle, conclusion)
-  beginning.scan(/\./).size +
-  middle.scan(/\./).size +
-  conclusion.scan(/\./).size
+  phrase = Phrase.new(beginning, middle, conclusion)
+  phrase.beginning.scan(/\./).size +
+  phrase.middle.scan(/\./).size +
+  phrase.conclusion.scan(/\./).size
 end
