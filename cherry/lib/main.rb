@@ -16,7 +16,7 @@ def total_and_smallest
       smallest = d
     end
   end
-  
+
   [total, smallest]
 end
 
@@ -25,6 +25,7 @@ end
 
 def repeat
   data = ["This", "is", "the", "data", "to", "use"]
+  data.reduce("") { |result, word| result += (word) }
   result = ""
   (0..5).each do |i|
     result += data[i]
